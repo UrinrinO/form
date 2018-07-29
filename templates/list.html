@@ -62,13 +62,15 @@
       </tr>
     </thead>
     <tbody>
+    {% for obj in object_list %}
       <tr>
-          {% for obj in object_list %}
+
         <td>{{ obj.first_name }}</td>
         <td>{{ obj.last_name }}</td>
         <td>{{ obj.email }}</td>
-          {% endfor %}
+
       </tr>
+    {% endfor %}
     </tbody>
   </table>
 </div>
