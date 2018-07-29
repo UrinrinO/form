@@ -34,4 +34,9 @@ def add_database(request):
     return render(request, "index.html")
 
 def list_database(request):
-    return render(request, "list.html")
+
+    queryset = Database.objects.all()
+    context = {
+        'object_list': queryset
+    }
+    return render(request, "list.html", context)

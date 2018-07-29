@@ -19,9 +19,9 @@ from django.contrib import admin
 from database.views import home_page, add, add_database, list_database
 
 urlpatterns = [
-    url(r'^$', home_page),
-    url(r'^add/$', add),
-    url(r'^add_database/$', add_database),
-    url(r'^list/$', list_database),
+    url(r'^$', home_page, name='home'),
+    url(r'^add/$', add, name='add'),
+    url(r'^add_database/$', add_database, name='add_database'),
+    url(r'^list/$', list_database, name='list'),
     url(r'^admin/', admin.site.urls),
 ]
